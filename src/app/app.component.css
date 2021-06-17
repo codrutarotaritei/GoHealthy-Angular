@@ -1,0 +1,8 @@
+.navbar {
+    position: absolute;
+    left: 600px;
+}
+
+.navbar_photo {
+    z-index: 1000;
+}

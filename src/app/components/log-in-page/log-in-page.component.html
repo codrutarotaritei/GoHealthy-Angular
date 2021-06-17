@@ -1,0 +1,83 @@
+<body>
+  <div class="header">
+    <!-- <img class="start_photo" src="assets/images/story_start_photo.jpg" alt="" /> -->
+    <div class="logo_container">
+      <a routerLink=""
+        ><img class="logo" src="assets/images/logo.png" alt=""
+      /></a>
+    </div>
+    <div class="navbar_photo">
+      <img src="assets/images/navbar_photo5.png" alt="" />
+    </div>
+    <div class="navbar_buttons">
+      <div class="menu">
+        <a class="menu_a" routerLink="/menu">
+          <span class="menu_a_span">Menu</span></a
+        >
+      </div>
+
+      <div class="our_story">
+        <a class="our_story_a" routerLink="/our-story">
+          <span class="our_story_a_span">Our story</span></a
+        >
+      </div>
+
+      <div class="reviews">
+        <a class="reviews_a" routerLink="/reviews">
+          <span class="reviews_a_span">Reviews</span>
+        </a>
+      </div>
+
+      <div class="contact">
+        <a class="contact_a" routerLink="/contact">
+          <span class="contact_a_span">Contact</span>
+        </a>
+      </div>
+
+      <div class="log_in">
+        <a class="log_in_a" routerLink="/log-in">
+          <span class="log_in_a_span">Log In</span>
+        </a>
+      </div>
+
+      <div class="sign_in">
+        <a class="sign_in_a" routerLink="/sign-in">
+          <span class="sign_in_a_span">Sign In</span>
+        </a>
+      </div>
+
+      <div class="cart">
+        <a class="cart_a" routerLink="/cart">
+          <span class="cart_a_span">Cart</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="title">{{ titleName }}</div>
+
+  <div class="log-in-big-photo">
+    <img src="/assets/images/log-in-start-photo.jpg" alt="" />
+  </div>
+
+  <div class="log-in-form-container">
+    <form class="log-in-form" role="form">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        [(ngModel)]="username"
+        type="text"
+        name="username"
+      /><br />
+      <label for="password">Password</label>
+      <input
+        id="password"
+        [(ngModel)]="password"
+        type="password"
+        name="password"
+      /><br />
+      <button (click)="logIn()">Login</button>
+    </form>
+
+    <!-- <p>{{ username }} - {{ password }} - {{ token }}</p> pentru a face display la valorile introduse -->
+  </div>
+</body>

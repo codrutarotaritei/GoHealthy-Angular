@@ -1,0 +1,43 @@
+<form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+  <input type="hidden" id="productId" name="productId" />
+  <input
+    class="input-line full-width"
+    type="text"
+    id="name"
+    name="name"
+    [(ngModel)]="product.name"
+    placeholder="Name"
+    required
+  />
+  <input
+    class="input-line full-width"
+    type="text"
+    id="pictureUrl"
+    name="pictureUrl"
+    [(ngModel)]="product.pictureUrl"
+    placeholder="Picture Url"
+    required
+  />
+  <input
+    class="input-line full-width"
+    type="text"
+    id="price"
+    name="price"
+    [(ngModel)]="product.price"
+    placeholder="Price"
+    required
+  />
+  <textarea
+    rows="4" cols="50"
+    class="input-line full-width"
+    form="usrform"
+    id="ingredients"
+    name="ingredients"
+    [(ngModel)]="product.ingredients"
+    placeholder="Ingredients"
+    required
+  ></textarea>
+  <button class="create-account-button full-width" type="submit">
+    Add product
+  </button>
+</form>

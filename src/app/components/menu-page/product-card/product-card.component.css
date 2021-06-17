@@ -1,0 +1,237 @@
+.products-container {
+    position: absolute;
+    top: 147px;
+    /* background-color: lightgray; */
+    width: 1111px;
+    height: 1080px;
+}
+
+.product-card {
+    position: relative;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 350px;
+    height: 170px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    margin: 10px;
+    border-radius: 3% / 6%;
+}
+
+.product-card:hover {
+    transform: scale(1.1);
+}
+
+.photo-container {
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    border-radius: 10%;
+    margin: 4%;
+    /* background-color: lightgray; */
+    overflow: hidden;
+}
+
+.product-cover {
+    position: relative;
+    height: 110px;
+    width: 110px;
+    
+    
+}
+
+.product-card-main {
+    position: absolute;
+    /* background-color: lightgray; */
+    width: 60%;
+    height: 73%;
+    right: 0;
+}
+
+.product-name {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    margin: 10px;
+    margin-top: 14px;
+}
+
+.product-ingredients {
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    color: gray;
+    font-size: 14px;
+    top: 41%;
+    bottom: 0;
+    margin-left: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 300;
+}
+
+.product-card-footer {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    bottom: 5%;
+    left: 5%;
+    /* background-color: lightgray; */
+}
+
+.product-price {
+    position: absolute;
+    left: 10%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    margin: 5px;
+    font-weight: 300;
+}
+
+.remove-product-button {
+    position: absolute;
+    right: 30%;
+    background-color: lightgray;
+    border: 0;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.remove-product-button:hover {
+    transform: rotate(360deg);
+}
+
+.remove-product-button-photo {
+    position: relative;
+    height: 25px;
+
+}
+
+.edit-product-button {
+    position: absolute;
+    right: 15%;
+    background-color: lightgray;
+    border: 0;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.edit-product-button:hover {
+    transform: rotate(90deg);
+}
+
+.edit-product-button-photo {
+    position: relative;
+    height: 35px;
+    width: 35px;
+}
+
+.add-cart-button {
+    position: absolute;
+    border: 0;
+    background-color: lightgray;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    right: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.add-cart-button:hover {
+    transform:rotate(90deg);
+}
+
+.add-cart-button-photo {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    margin-bottom: px;
+    
+}
+
+/* search */
+
+.search-form {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: lightgray;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 3px solid white;
+    padding: 5px;
+}
+
+.search-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+    background-color: lightgray;
+}
+
+.search-input[type="search"]::-webkit-search-decoration,
+.search-input[type="search"]::-webkit-search-cancel-button,
+.search-input[type="search"]::-webkit-search-results-button,
+.search-input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+.fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+.search-form:hover{
+    width: 600px;
+    cursor: pointer;
+}
+
+.search-form:hover .search-input{
+    display: block;
+}
+
+/* best ones */
+
+.best-ones {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2em;
+    position: absolute;
+    top: 80px;
+    left: 3%;
+    /* background-color: lightgray; */
+    width: 270px;
+}

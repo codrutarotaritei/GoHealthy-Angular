@@ -1,0 +1,50 @@
+<div class="search-box">
+  <div class="search-form">
+    <input class="search-input searchTerm" type="text" [(ngModel)]="term" />
+    <i class="fa fa-search" type="submit"></i>
+  </div>
+</div>
+
+<div class="best-ones">Best ones so far</div>
+
+<div class="products-container">
+  <div
+    class="product-card"
+    *ngFor="let product of products | searchFilter: term"
+  >
+    <div class="photo-container">
+      <img class="product-cover" [src]="product.pictureUrl" alt="" />
+    </div>
+    <div class="product-card-main">
+      <div class="product-name">{{ product.name }}</div>
+      <div class="product-ingredients">{{ product.ingredients }}</div>
+    </div>
+    <div class="product-card-footer">
+      <div class="product-price">{{ product.price }} €</div>
+      <button (click)="deleteProduct(product.id)" class="remove-product-button">
+        <img
+          class="remove-product-button-photo"
+          src="/assets/images/remove.png"
+          alt=""
+        />
+      </button>
+      <button
+        [routerLink]="['/products', product.id]"
+        class="edit-product-button"
+      >
+        <img
+          class="edit-product-button-photo"
+          src="/assets/images/edit.png"
+          alt=""
+        />
+      </button>
+      <button class="add-cart-button">
+        <img
+          class="add-cart-button-photo"
+          src="/assets/images/plus-icon.png"
+          alt=""
+        />
+      </button>
+    </div>
+  </div>
+</div>

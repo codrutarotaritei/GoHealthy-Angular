@@ -1,0 +1,227 @@
+body {
+    height: 1080px;
+}
+
+.start_photo {
+    object-position: 50% 65%;
+}
+
+.title {
+    top: 25%;
+    color: white;
+}
+
+.our_story_main_content {
+    position: absolute;
+    width: 90%;
+    height: 70%;
+    left: 5%;
+    /* background-color: lightgrey; */
+}
+
+/* Who are we */
+
+.who_are_we {
+    position: absolute;
+    height: 100%;
+    width: 47.5%;
+    /* background-color: grey; */
+}
+
+.waw-text-container-1 {
+    position: absolute;
+    /* background-color: lightgray; */
+    height: 15%;
+    width: 80%;
+    left: 10%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    padding: 1%;
+    font-weight: 300;
+}
+
+.waw-text-container-2 {
+    position: absolute;
+    /* background-color: lightgray; */
+    height: 70%;
+    width: 60%;
+    left: 10%;
+    top: 28%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    padding: 1%;
+    padding-left: 4%;
+    text-align: left;
+    font-weight: 300;
+}
+
+
+
+.who_are_we_title, .what_we_want_title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.o_story_photo_1 {
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    /* background-color: grey; */
+    left: 35%;
+    top: 28%;
+}
+
+.o_story_photo_1 img {
+    max-width: 100%;
+}
+
+
+/* What we want */
+
+.what_we_want {
+    position: absolute;
+    height: 100%;
+    width: 47.5%;
+    /* background-color: grey; */
+    right: 0;
+    z-index: -1;
+}
+
+.www-text-container-1 {
+    position: absolute;
+    /* background-color: lightgray; */
+    height: 15%;
+    width: 80%;
+    left: 10%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    padding: 1%;
+    font-weight: 300;
+}
+
+.www-text-container-2 {
+    position: absolute;
+    /* background-color: lightgray; */
+    height: 70%;
+    width: 60%;
+    right: 10%;
+    top: 28%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    text-align: right;
+    padding: 1%;
+    padding-right: 4%;
+    font-weight: 300;
+}
+
+/* Founders */
+
+.founders-photo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 1792px;
+    height: 1458px;
+    top: 88%;
+
+}
+
+.founders-photo-img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    object-fit: cover;
+    opacity: 80%;
+
+
+}
+
+.founders {
+    position: absolute;
+    /* background-color: lightgray; */
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 100%;
+}
+
+.founders-title-container {
+    position: absolute;
+    /* background-color: grey; */
+    height: 12%;
+    width: 20%;
+    left: 40%;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+
+}
+
+.founders-name-container {
+    position: absolute;
+    /* background-color: grey; */
+    width: 90%;
+    top: 20%;
+    height: 10%;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f1, .f2, .f3 {
+    width: 20%;
+    height: 100%;
+    /* background-color: darkgray; */
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+.founders-description-container {
+    position: absolute;
+    /* background-color: grey; */
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-d-1, .f-d-2, .f-d-3 {
+    width: 30%;
+    height: 100%;
+    left: 3%;
+    /* background-color: darkgray; */
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.our-story-footer {
+    position: absolute;
+    background-color: lightgray;
+    width: 100vw;
+    top: 180%;
+}
+
+.bottom-footer {
+    position: absolute;
+    /* background-color: lightgray; */
+    width: 100%;
+    height: 230px;
+    top: 70%;
+}
+
+.terms_and_conditions {
+    color: white;
+}
+
+.i_logo, .f_logo, .t_logo, .up {
+    filter: invert(100%);
+}

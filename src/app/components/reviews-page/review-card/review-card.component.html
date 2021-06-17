@@ -1,0 +1,17 @@
+<div class="reviews-container">
+    <div class="review-card" *ngFor="let review of reviews">
+        <div class="photo-container">
+            <img class="review-cover" [src]="review.pictureUrl" alt="">
+        </div>
+        <div class="review-card-main">
+            <div class="review-name">{{ review.name }}</div>
+            <div class="review-description">{{ review.description }}</div>
+        </div>
+        <div class="review-card-footer">
+            <div class="review-rating">Rating: {{ review.rating }} / 5</div>
+            <button class="review-like-button">
+                <img class="review-like-photo" src="/assets/images/reviews-like-button.png" alt="">
+            </button>
+        </div>
+    </div>
+</div>

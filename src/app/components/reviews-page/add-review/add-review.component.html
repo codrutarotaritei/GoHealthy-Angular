@@ -1,0 +1,43 @@
+<form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+  <input type="hidden" id="productId" name="productId" />
+  <input
+    class="input-line full-width"
+    type="text"
+    id="name"
+    name="name"
+    [(ngModel)]="review.name"
+    placeholder="Name"
+    required
+  />
+  <input
+    class="input-line full-width"
+    type="text"
+    id="pictureUrl"
+    name="pictureUrl"
+    [(ngModel)]="review.pictureUrl"
+    placeholder="Picture Url"
+    required
+  />
+  <input
+    class="input-line full-width"
+    type="text"
+    id="price"
+    name="price"
+    [(ngModel)]="review.rating"
+    placeholder="Rating (Between 1 and 5)"
+    required
+  />
+  <textarea
+    rows="4" cols="50"
+    class="input-line full-width"
+    form="usrform"
+    id="ingredients"
+    name="ingredients"
+    [(ngModel)]="review.description"
+    placeholder="Description"
+    required
+  ></textarea>
+  <button class="create-account-button full-width" type="submit">
+    Add review
+  </button>
+</form>

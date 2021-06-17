@@ -1,0 +1,135 @@
+<body>
+  <!-- <img
+      class="sign-in-main-photo"
+      src="/assets/images/start_photo.jpg"
+      alt=""
+    /> -->
+
+  <div class="header">
+    <!-- <img class="start_photo" src="/assets/images/start_photo.jpg" alt="" /> -->
+    <div class="logo_container">
+      <a routerLink=""
+        ><img class="logo" src="assets/images/white_logo.png" alt=""
+      /></a>
+    </div>
+    <div class="navbar_photo">
+      <img src="assets/images/navbar_photo5.png" alt="" />
+    </div>
+    <div class="navbar_buttons">
+      <div class="menu">
+        <a class="menu_a" routerLink="/menu">
+          <span class="menu_a_span">Menu</span></a
+        >
+      </div>
+
+      <div class="our_story">
+        <a class="our_story_a" routerLink="/our-story">
+          <span class="our_story_a_span">Our story</span></a
+        >
+      </div>
+
+      <div class="reviews">
+        <a class="reviews_a" routerLink="/reviews">
+          <span class="reviews_a_span">Reviews</span>
+        </a>
+      </div>
+
+      <div class="contact">
+        <a class="contact_a" routerLink="/contact">
+          <span class="contact_a_span">Contact</span>
+        </a>
+      </div>
+
+      <div class="log_in">
+        <a class="log_in_a" routerLink="/log-in">
+          <span class="log_in_a_span">Log In</span>
+        </a>
+      </div>
+
+      <div class="sign_in">
+        <a class="sign_in_a" routerLink="/sign-in">
+          <span class="sign_in_a_span">Sign In</span>
+        </a>
+      </div>
+
+      <div class="cart">
+        <a class="cart_a" routerLink="/cart">
+          <span class="cart_a_span">Cart</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="title">Welcome</div>
+
+  <!-- <div class="form-container">
+      <div class="window">
+          <div class="overlay"></div>
+          <div class="content">
+              <div class="welcome">Hello There!</div>
+              <div class="subtitle">To take advantage of all the options, we encourage you to create an account.</div>
+              <div class="input-fields">
+                  <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+                    <input type="hidden" id="userId" name="userId">
+                    <input class = "input-line full-width" type = "text" placeholder="Username" id="username" name="username" [(ngModel)]="user.username" required>
+                    <input class = "input-line full-width" type = "email" placeholder="Email" id="email" name="email" [(ngModel)]="user.email" required>
+                    <input class = "input-line full-width" type = "password" placeholder="Password" id="password" name="password" [(ngModel)]="user.password" required>
+                  </form>
+                  <p>{{response}}</p>
+              </div>
+              <div><button class="create-account">Create Account</button></div>
+          </div>
+      </div>
+  </div> -->
+
+  <div class="sign-in-big-photo">
+    <img src="/assets/images/start_photo.jpg" alt="" />
+  </div>
+
+  <div class="form-container">
+    <div class="window">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="log-in-form-title">New customer?</div>
+        <div class="subtitle">
+          To take advantage of all the options, we encourage you to create an
+          account.
+        </div>
+        <div class="input-fields">
+          <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+            <input type="hidden" id="userId" name="userId" />
+            <input
+              class="input-line full-width"
+              type="text"
+              id="username"
+              name="username"
+              [(ngModel)]="user.username"
+              placeholder="Username"
+              required
+            />
+            <input
+              class="input-line full-width"
+              type="text"
+              id="email"
+              name="email"
+              [(ngModel)]="user.email"
+              placeholder="Email"
+              required
+            />
+            <input
+              class="input-line full-width"
+              type="password"
+              id="password"
+              name="password"
+              [(ngModel)]="user.password"
+              placeholder="Password"
+              required
+            />
+            <button class="create-account-button full-width" type="submit">
+              Create Account
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
