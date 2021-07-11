@@ -1,105 +1,50 @@
-<!-- <div class="m-3">
-  <h3>Angular search by filter</h3>
-  <div class="wrap">
-    <div class="search">
-      <input type="text" [(ngModel)]="term" class="searchTerm" placeholder="What are you looking for?">
-    </div>
-
-    <div *ngFor="let product of products | searchFilter :term">
-      <p>
-        {{ product.name }}
-      </p>
-    </div>
+<div class="search-box">
+  <div class="search-form">
+    <input class="search-input searchTerm" type="text" [(ngModel)]="term" />
+    <i class="fa fa-search" type="submit"></i>
   </div>
-</div> -->
+</div>
 
-<!-- <div class="container">
-  <div class="log-in-card-container">
-    <form class="log-in-form">
-      <div class="log-in-form-title">Log In</div>
+<div class="best-ones">Best ones so far</div>
 
-      <div class="input-container">
-        <input
-          class="input"
-          type="text"
-          name="username"
-          placeholder="username or email"
+<div class="products-container">
+  <div
+    class="product-card"
+    *ngFor="let product of products | searchFilter: term"
+  >
+    <div class="photo-container">
+      <img class="product-cover" [src]="product.pictureUrl" alt="" />
+    </div>
+    <div class="product-card-main">
+      <div class="product-name">{{ product.name }}</div>
+      <div class="product-ingredients">{{ product.ingredients }}</div>
+    </div>
+    <div class="product-card-footer">
+      <div class="product-price">{{ product.price }} €</div>
+      <button (click)="deleteProduct(product.id)" class="remove-product-button">
+        <img
+          class="remove-product-button-photo"
+          src="/assets/images/remove.png"
+          alt=""
         />
-        <span class="focus-input"></span>
-      </div>
-
-      <div class="input-container">
-        <input
-          class="input"
-          type="password"
-          name="pass"
-          placeholder="password"
+      </button>
+      <button
+        [routerLink]="['/products', product.id]"
+        class="edit-product-button"
+      >
+        <img
+          class="edit-product-button-photo"
+          src="/assets/images/edit.png"
+          alt=""
         />
-        <span class="focus-input"></span>
-      </div>
-
-      <div class="log-in-button-container">
-        <button class="log-in-button">Log In</button>
-      </div>
-
-      <div class="sign-in-button-container">
-        <a href="#" class="sign-in-button"> Sign Up </a>
-      </div>
-    </form>
-  </div>
-</div> -->
-
-<body>
-  <div class="form-side-container">
-    <div class="form-container">
-      <div class="logo-container">
-        <img class="logo" src="/assets/images/logo.png" alt="logo" />
-      </div>
-      <div class="login-container">
-        <h1 class="login-title">Log in</h1>
-        <form class="form" action="#!">
-          <div class="form-group">
-            <label class="label-email" for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="input-email"
-              placeholder="email@example.com"
-            />
-          </div>
-          <div class="form-group">
-            <label class="label-password" for="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              class="input-password"
-              placeholder="enter your passsword"
-            />
-          </div>
-          <input
-            name="login"
-            id="login"
-            class="login-btn"
-            type="button"
-            value="Login"
-          />
-        </form>
-        <div class="login-footer">
-          <div class="have-an-account">Don't have an account?</div>
-          <div>
-            <a href="#!" class="text-reset">Register here</a>
-          </div>
-        </div>
-      </div>
+      </button>
+      <button class="add-cart-button">
+        <img
+          class="add-cart-button-photo"
+          src="/assets/images/plus-icon.png"
+          alt=""
+        />
+      </button>
     </div>
   </div>
-  <div class="login-photo-container">
-    <img
-      src="/assets/images/start_photo.jpg"
-      alt="login photo"
-      class="login-photo"
-    />
-  </div>
-</body>
+</div>

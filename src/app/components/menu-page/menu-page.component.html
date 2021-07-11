@@ -60,17 +60,21 @@
     </div>
     <div class="title">Menu</div>
 
-      <button class="add-product-button" routerLink="/add-product">
-        <img
-          class="add-product-photo"
-          src="/assets/images/add-a-product-photo.png"
-          alt=""
-        />
-      </button>
-    </div>
+    <button (click)="openModal('custom-modal-1')" class="add-product-button">
+      <img
+        class="add-product-photo"
+        src="/assets/images/add-a-product-photo.png"
+        alt=""
+      />
+    </button>
+  </div>
 
   <div class="menu-big-photo">
-    <img class="menu-big-photo-img" src="/assets/images/menu-big-photo.jpg" alt="" />
+    <img
+      class="menu-big-photo-img"
+      src="/assets/images/menu-big-photo.jpg"
+      alt=""
+    />
   </div>
 
   <div class="menu-main-content">
@@ -100,4 +104,85 @@
       <div #cart class="cart-container" id="cart" *ngIf="cart"></div>
     </div>
   </div>
+
+  <jw-modal id="custom-modal-1">
+    <img class="modal-photo" src="/assets/images/add-product-img.jpg" alt="" />
+    <div class="add-product-modal-title">
+      Add a new product
+    </div>
+    <form
+      class="add-product-form"
+      (ngSubmit)="onSubmit()"
+      #registerForm="ngForm"
+    >
+      <div class="wrap-input">
+        <input type="hidden" id="productId" name="productId" />
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="wrap-input">
+        <input
+          class="input-line full-width"
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="product.name"
+          placeholder="Name"
+          required
+        />
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="wrap-input">
+        <input
+          class="input-line full-width"
+          type="text"
+          id="pictureUrl"
+          name="pictureUrl"
+          [(ngModel)]="product.pictureUrl"
+          placeholder="Picture Url"
+          required
+        />
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="wrap-input">
+        <input
+          class="input-line full-width"
+          type="text"
+          id="price"
+          name="price"
+          [(ngModel)]="product.price"
+          placeholder="Price"
+          required
+        />
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="wrap-input">
+        <textarea
+          rows="4"
+          cols="42"
+          class="input-line full-width"
+          form="usrform"
+          id="ingredients"
+          name="ingredients"
+          [(ngModel)]="product.ingredients"
+          placeholder="Ingredients"
+          required
+        ></textarea>
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="add-product-btn-container">
+        <button
+          (click)="closeModal('custom-modal-1')"
+          class="add-product-btn full-width"
+          type="submit"
+        >
+          <span>Add product</span>
+        </button>
+      </div>
+    </form>
+  </jw-modal>
 </body>

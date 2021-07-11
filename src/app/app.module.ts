@@ -27,6 +27,9 @@ import { ReviewCardComponent } from './components/reviews-page/review-card/revie
 import { EditProductComponent } from './components/menu-page/edit-product/edit-product.component';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { AddReviewComponent } from './components/reviews-page/add-review/add-review.component';
+import { ModalModule } from './components/_modal/';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,14 @@ import { AddReviewComponent } from './components/reviews-page/add-review/add-rev
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule,
+    RouterModule.forRoot([
+      {path: '', component: MenuPageComponent},
+      {path: 'products/:id', component: EditProductComponent}
+    ]),
+    BrowserAnimationsModule,
+    
     
   ],
   providers: [

@@ -1,27 +1,27 @@
 <h2>Edit product</h2>
 
-<div [formGroup]="myForm">
-  <div class="form-control">
-    <label>Name</label>
-    <input type="text" formControlName="name"/>
+<form class="edit-product-form">
+  <div [formGroup]="myForm">
+    <div class="form-control">
+      <label>Name</label>
+      <input type="text" formControlName="name"/>
+    </div>
+  
+    <div class="form-control">
+      <label>Picture</label>
+      <input type="text" formControlName="pictureUrl"/>
+    </div>
+  
+    <div class="form-control">
+      <label>Price</label>
+      <input type="text" formControlName="price"/>
+    </div>
+  
+    <div class="form-control">
+      <label>Ingredients</label>
+      <textarea type="text" formControlName="ingredients"></textarea>
+    </div>
   </div>
-
-  <div class="form-control">
-    <label>Picture</label>
-    <input type="text" formControlName="pictureUrl"/>
-  </div>
-
-  <div class="form-control">
-    <label>Price</label>
-    <input type="text" formControlName="price"/>
-  </div>
-
-  <div class="form-control">
-    <label>Ingredients</label>
-    <textarea type="text" formControlName="ingredients"></textarea>
-  </div>
-</div>
-
-{{ myForm.value | json }}
+</form>
 
 <button (click)="update()">Update</button>

@@ -48,3 +48,32 @@
     </div>
   </div>
 </div>
+
+<jw-modal id="custom-modal-1">
+  <form class="edit-product-form">
+  <div [formGroup]="myForm">
+    <div class="form-control">
+      <label>Name</label>
+      <input type="text" formControlName="name"/>
+    </div>
+  
+    <div class="form-control">
+      <label>Picture</label>
+      <input type="text" formControlName="pictureUrl"/>
+    </div>
+  
+    <div class="form-control">
+      <label>Price</label>
+      <input type="text" formControlName="price"/>
+    </div>
+  
+    <div class="form-control">
+      <label>Ingredients</label>
+      <textarea type="text" formControlName="ingredients"></textarea>
+    </div>
+  </div>
+</form>
+
+<button (click)="update()">Update</button>
+
+</jw-modal>

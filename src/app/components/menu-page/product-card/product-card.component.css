@@ -19,6 +19,7 @@
     transition: 0.3s;
     margin: 10px;
     border-radius: 3% / 6%;
+    cursor: pointer;
 }
 
 .product-card:hover {
