@@ -10,9 +10,14 @@
   z-index: 200;
 }
 
+.navbar_buttons {
+  top: 5px;
+}
+
 .title {
   color: white;
   font-size: 750%;
+  top: 91px;
 }
 
 .menu-big-photo {
@@ -49,6 +54,7 @@
 
 .menu-main-content {
   position: absolute;
+  top: 45%;
   width: 95%;
   height: 60%;
   /* background-color: lightgrey; */
@@ -239,6 +245,7 @@
 
 .add-product-button {
   position: absolute;
+  top: 415px;
   height: 42px;
   width: 42px;
   left: 48.8%;
