@@ -10,7 +10,7 @@
         ><img class="logo" src="assets/images/white_logo.png" alt=""
       /></a>
     </div>
-     <div class="navbar_photo">
+    <div class="navbar_photo">
       <img src="assets/images/navbar_photo5.png" alt="" />
     </div>
     <div class="navbar_buttons">
@@ -60,17 +60,104 @@
   </div>
 
   <div class="reviews-main-content">
-      <div class="main-content-photo">
-          <img src="/assets/images/reviews-main-content-photo.jpg" alt="">
-      </div>
-      <div class="reviews-subtitle">
-          Reviews help us to improve our overall services and our food
-      </div>
-      <div class="reviews-sub-subtitle">
-          You can <a class="leave-review-link" routerLink="/add-review"> leave a review </a> whenever you want
-      </div>
-      <div class="review-card-container">
-        <app-review-card></app-review-card>
-      </div>
+    <div class="main-content-photo">
+      <img src="/assets/images/reviews-main-content-photo.jpg" alt="" />
+    </div>
+    <div class="reviews-subtitle">
+      Reviews help us to improve our overall services and our food
+    </div>
+    <div class="reviews-sub-subtitle">
+      You can
+      <a class="leave-review-link" (click)="openModal('custom-modal-2')">
+        leave a review
+      </a>
+      whenever you want
+    </div>
+    <div class="review-card-container">
+      <app-review-card></app-review-card>
+    </div>
   </div>
+
+  <jw-modal id="custom-modal-2">
+    <img
+      class="review-modal-photo"
+      src="/assets/images/review-modal-photo.jpg"
+      alt=""
+    />
+    <div class="add-product-modal-title">Add a new review</div>
+    <form
+      class="add-review-form"
+      (ngSubmit)="onSubmit()"
+      #registerForm="ngForm"
+    >
+      <div class="wrap-input">
+        <input type="hidden" id="productId" name="productId" />
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="wrap-input">
+        <input
+          class="input-line full-width"
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="review.name"
+          placeholder="Name"
+          required
+        />
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="wrap-input">
+        <input
+          class="input-line full-width"
+          type="text"
+          id="pictureUrl"
+          name="pictureUrl"
+          [(ngModel)]="review.pictureUrl"
+          placeholder="Picture Url"
+          required
+        />
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="wrap-input">
+        <input
+          class="input-line full-width"
+          type="text"
+          id="rating"
+          name="rating"
+          [(ngModel)]="review.rating"
+          placeholder="Rating (Between 1 and 5)"
+          required
+        />
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="wrap-input">
+        <textarea
+          rows="4"
+          cols="42"
+          class="input-line full-width"
+          form="usrform"
+          id="description"
+          name="description"
+          [(ngModel)]="review.description"
+          placeholder="Description"
+          required
+        ></textarea>
+        <span class="shadow-input"></span>
+      </div>
+
+      <div class="add-review-btn-container">
+        <button
+          class="add-review-btn full-width"
+          (click)="closeModal('custom-modal-2')"
+          type="submit"
+        >
+          Add review
+        </button>
+      </div>
+    </form>
+  </jw-modal>
 </body>

@@ -42,9 +42,10 @@ export class MenuPageComponent implements OnInit {
     this.productService.createProduct(this.product).subscribe(data => {
       this.response = data;
     });
-    this.productService.getAllProducts().subscribe(response => {
-          this.products = response;
-        });
+    // this.productService.getAllProducts().subscribe(response => {
+    //       this.products = response;
+    //     });
+    this.router.navigate(['/menu']);
   }
 
     

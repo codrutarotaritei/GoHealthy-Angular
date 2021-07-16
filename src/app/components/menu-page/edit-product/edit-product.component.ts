@@ -4,6 +4,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AddProduct } from '../../models/add-product';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-edit-product',
@@ -28,7 +30,8 @@ export class EditProductComponent implements OnInit {
     private httpClient: HttpClient,
     private formBuilder: FormBuilder,
     private router: Router,
-    private productService: ProductServiceService) { }
+    private productService: ProductServiceService,
+    private modalService: NgbModal) { }
 
   ngOnInit(): void {
     console.log(this.activatedRoute.snapshot.params.id);

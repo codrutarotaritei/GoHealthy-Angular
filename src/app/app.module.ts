@@ -28,8 +28,14 @@ import { EditProductComponent } from './components/menu-page/edit-product/edit-p
 import { SearchFilterPipe } from './search-filter.pipe';
 import { AddReviewComponent } from './components/reviews-page/add-review/add-review.component';
 import { ModalModule } from './components/_modal/';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+const routes: Routes = [
+  {path: ':id', component: EditProductComponent}
+]
+
 
 @NgModule({
   declarations: [
@@ -63,11 +69,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     ModalModule,
-    RouterModule.forRoot([
-      {path: '', component: MenuPageComponent},
-      {path: 'products/:id', component: EditProductComponent}
-    ]),
+    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
+    NgbModule,
     
     
   ],
