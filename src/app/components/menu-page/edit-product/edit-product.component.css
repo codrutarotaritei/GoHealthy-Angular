@@ -1,0 +1,152 @@
+img {
+  z-index: 900;
+  opacity: 85%;
+}
+
+.title {
+  z-index: 1000;
+  top: 5%;
+}
+
+.edit-product-form {
+  position: absolute;
+  top: 23%;
+  z-index: 1000;
+  right: 32.5%;
+  width: 34.7%;
+  height: 350px;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  border-color: transparent !important;
+}
+
+.add-product-btn {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+.add-product-btn:hover {
+  cursor: pointer;
+}
+
+iframe {
+  border: none !important;
+}
+
+.wrap-input {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.input-line {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.shadow-input {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(87, 184, 70, 0.5);
+}
+
+.input-line:focus + .shadow-input {
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 80px 30px;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 80px 30px;
+    opacity: 0;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+input.input-line {
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px;
+}
+input.input-line + .shadow-input {
+  border-radius: 25px;
+}
+
+textarea.input-line {
+  min-height: 150px;
+  border-radius: 25px;
+  padding: 12px 30px;
+}
+textarea.input-line + .shadow-input {
+  border-radius: 25px;
+}
+
+.add-product-btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.add-product-btn {
+  min-width: 193px;
+  height: 40px;
+  border-radius: 25px;
+  background: #57b846;
+  /* font-family: "Quicksand", sans-serif; */
+  font-family: "Amatic SC", cursive;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  font-weight: 200;
+  line-height: 1.5;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  transition: all 0.4s;
+}
+
+.add-product-btn:hover {
+  background: #333333;
+  transform: scale(1.1);
+}
+
+label {
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 23px;
+  margin-left: 45%;
+  margin-bottom: 10px;
+}

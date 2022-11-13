@@ -54,7 +54,7 @@
 
 .product-name {
     position: absolute;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
@@ -66,8 +66,8 @@
     position: absolute;
     font-family: 'Quicksand', sans-serif;
     color: gray;
-    font-size: 14px;
-    top: 41%;
+    font-size: 16px;
+    top: 50%;
     bottom: 0;
     margin-left: 5px;
     text-overflow: ellipsis;

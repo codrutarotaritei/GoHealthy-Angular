@@ -1,27 +1,63 @@
-<h2>Edit product</h2>
+<img src="/assets/images/login3.jpg" alt="" />
+
+<div class="title">Edit product</div>
 
 <form class="edit-product-form">
+  
+
   <div [formGroup]="myForm">
-    <div class="form-control">
-      <label>Name</label>
-      <input type="text" formControlName="name"/>
+    <label>Name</label>
+    <div class="wrap-input">
+      <input
+        class="input-line full-width"
+        id="name"
+        name="name"
+        type="text"
+        formControlName="name"
+      />
+      <span class="shadow-input"></span>
     </div>
-  
-    <div class="form-control">
-      <label>Picture</label>
-      <input type="text" formControlName="pictureUrl"/>
+
+    <label>Picture</label>
+    <div class="wrap-input">
+      <input
+        class="input-line full-width"
+        id="picture"
+        name="picture"
+        type="text"
+        formControlName="pictureUrl"
+      />
+      <span class="shadow-input"></span>
     </div>
-  
-    <div class="form-control">
-      <label>Price</label>
-      <input type="text" formControlName="price"/>
+
+    <label>Price</label>
+    <div class="wrap-input">
+      <input
+        class="input-line full-width"
+        id="price"
+        name="price"
+        type="text"
+        formControlName="price"
+      />
+      <span class="shadow-input"></span>
     </div>
-  
-    <div class="form-control">
-      <label>Ingredients</label>
-      <textarea type="text" formControlName="ingredients"></textarea>
+
+    <label>Ingredients</label>
+    <div class="wrap-input">
+      <textarea
+        rows="4"
+        cols="42"
+        class="input-line full-width"
+        type="text"
+        formControlName="ingredients"
+      ></textarea>
+      <span class="shadow-input"></span>
     </div>
   </div>
-</form>
 
-<button (click)="update()">Update</button>
+  <div class="add-product-btn-container">
+    <button class="add-product-btn full-width" (click)="update()">
+      <span>Edit product</span>
+    </button>
+  </div>
+</form>

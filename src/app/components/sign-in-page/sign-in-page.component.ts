@@ -49,7 +49,7 @@ export class SignInPageComponent {
       return true;
 
     } else {
-      alert("Bad");
+      alert("Email is not valid");
       // console.log("Bad");
       return false;
     } 
