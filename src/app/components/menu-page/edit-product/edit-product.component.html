@@ -1,11 +1,9 @@
-<img src="/assets/images/login3.jpg" alt="" />
+<img src="/assets/images/edit-image.jpeg" alt="" />
 
 <div class="title">Edit product</div>
 
 <form class="edit-product-form">
-  
-
-  <div [formGroup]="myForm">
+  <div class="form-div" [formGroup]="myForm">
     <label>Name</label>
     <div class="wrap-input">
       <input
@@ -45,6 +43,7 @@
     <label>Ingredients</label>
     <div class="wrap-input">
       <textarea
+        id="ingredients"
         rows="4"
         cols="42"
         class="input-line full-width"
@@ -61,3 +60,40 @@
     </button>
   </div>
 </form>
+
+<!-- <div class="modal-header">
+  <h4>Test</h4>
+</div>
+<div class="modal-body">
+  <div class="photo-container">
+    <img class="product-cover" [src]="product.pictureUrl" alt="" />
+  </div>
+  <div class="product-card-main">
+    <div class="product-name">{{ product.name }}</div>
+    <div class="product-ingredients">{{ product.ingredients }}</div>
+  </div>
+  <div class="product-card-footer">
+    <div class="product-price">{{ product.price }} €</div>
+    <button class="remove-product-button">
+      <img
+        class="remove-product-button-photo"
+        src="/assets/images/remove.png"
+        alt=""
+      />
+    </button>
+    <button class="edit-product-button">
+      <img
+        class="edit-product-button-photo"
+        src="/assets/images/edit.png"
+        alt=""
+      />
+    </button>
+    <button class="add-cart-button">
+      <img
+        class="add-cart-button-photo"
+        src="/assets/images/plus-icon.png"
+        alt=""
+      />
+    </button>
+  </div>
+</div> -->

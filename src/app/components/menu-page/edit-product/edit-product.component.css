@@ -1,11 +1,19 @@
 img {
   z-index: 900;
-  opacity: 85%;
+  /* opacity: 85%; */
+  width: 100%;
+   -webkit-filter: brightness(70%);
+  background-size: cover;
+  overflow: hidden;
+
 }
 
 .title {
   z-index: 1000;
   top: 5%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: white;
 }
 
 .edit-product-form {
@@ -36,6 +44,7 @@ input:focus {
   outline: none !important;
   border: none;
   background: transparent;
+  margin-top: 5%;
 }
 
 .add-product-btn:hover {
@@ -67,7 +76,7 @@ iframe {
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 100%;
+  height: 50%;
   box-shadow: 0px 0px 0px 0px;
   color: rgba(87, 184, 70, 0.5);
 }
@@ -122,7 +131,7 @@ textarea.input-line + .shadow-input {
   min-width: 193px;
   height: 40px;
   border-radius: 25px;
-  background: #57b846;
+  background: white;
   /* font-family: "Quicksand", sans-serif; */
   font-family: "Amatic SC", cursive;
   font-size: 20px;
@@ -137,9 +146,19 @@ textarea.input-line + .shadow-input {
   transition: all 0.4s;
 }
 
+.add-product-btn span {
+  color: black;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;  
+}
+
 .add-product-btn:hover {
-  background: #333333;
+  background: grey;
   transform: scale(1.1);
+}
+
+.add-product-btn span:hover {
+  color: lightgrey;
 }
 
 label {
@@ -147,6 +166,23 @@ label {
   font-family:Arial, Helvetica, sans-serif;
   color: white;
   font-size: 23px;
-  margin-left: 45%;
+  /* margin-left: 45%; */
   margin-bottom: 10px;
+}
+
+.form-div {
+  background-color: lightgrey;
+  padding: 5%;
+  border-radius: 5%;
+  
+}
+
+label {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+  float: left;
+}
+
+.shadow-input textarea {
+  height: 200%;
 }

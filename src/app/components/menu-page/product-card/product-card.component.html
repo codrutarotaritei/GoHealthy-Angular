@@ -11,69 +11,47 @@
   <div
     class="product-card"
     *ngFor="let product of products | searchFilter: term"
+    
   >
-    <div class="photo-container">
-      <img class="product-cover" [src]="product.pictureUrl" alt="" />
-    </div>
-    <div class="product-card-main">
-      <div class="product-name">{{ product.name }}</div>
-      <div class="product-ingredients">{{ product.ingredients }}</div>
-    </div>
-    <div class="product-card-footer">
-      <div class="product-price">{{ product.price }} €</div>
-      <button (click)="deleteProduct(product.id)" class="remove-product-button">
-        <img
-          class="remove-product-button-photo"
-          src="/assets/images/remove.png"
-          alt=""
-        />
-      </button>
-      <button
-        [routerLink]="['/products', product.id]"
-        class="edit-product-button"
-      >
-        <img
-          class="edit-product-button-photo"
-          src="/assets/images/edit.png"
-          alt=""
-        />
-      </button>
-      <button class="add-cart-button">
-        <img
-          class="add-cart-button-photo"
-          src="/assets/images/plus-icon.png"
-          alt=""
-        />
-      </button>
-    </div>
+    <a>
+      <div class="photo-container">
+        <img class="product-cover" [src]="product.pictureUrl" alt="" />
+      </div>
+      <div class="product-card-main">
+        <div class="product-name">{{ product.name }}</div>
+        <div class="product-ingredients">{{ product.ingredients }}</div>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-price">{{ product.price }} €</div>
+        <button
+          (click)="deleteProduct(product.id)"
+          class="remove-product-button"
+        >
+          <img
+            class="remove-product-button-photo"
+            src="/assets/images/remove.png"
+            alt=""
+          />
+        </button>
+        <button
+          class="edit-product-button"
+          [routerLink]="['/products', product.id]"
+        >
+          <img
+            class="edit-product-button-photo"
+            src="/assets/images/edit.png"
+            alt=""
+            
+          />
+        </button>
+        <button class="add-cart-button">
+          <img
+            class="add-cart-button-photo"
+            src="/assets/images/plus-icon.png"
+            alt=""
+          />
+        </button>
+      </div>
+    </a>
   </div>
 </div>
-
-<jw-modal id="custom-modal-1">
-  <form class="edit-product-form">
-  <div [formGroup]="myForm">
-    <div class="form-control">
-      <label>Name</label>
-      <input type="text" formControlName="name"/>
-    </div>
-  
-    <div class="form-control">
-      <label>Picture</label>
-      <input type="text" formControlName="pictureUrl"/>
-    </div>
-  
-    <div class="form-control">
-      <label>Price</label>
-      <input type="text" formControlName="price"/>
-    </div>
-  
-    <div class="form-control">
-      <label>Ingredients</label>
-      <textarea type="text" formControlName="ingredients"></textarea>
-    </div>
-  </div>
-</form>
-
-<button (click)="update()">Update</button>
-
-</jw-modal>

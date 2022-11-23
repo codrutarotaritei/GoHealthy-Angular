@@ -31,6 +31,8 @@ import { ModalModule } from './components/_modal/';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalContainerComponent } from './modal-container/modal-container.component';
+import { ModalProductComponent } from './modal-product/modal-product.component';
 
 const routes: Routes = [
   {path: ':id', component: EditProductComponent}
@@ -59,7 +61,9 @@ const routes: Routes = [
     ReviewCardComponent,
     EditProductComponent,
     SearchFilterPipe,
-    AddReviewComponent
+    AddReviewComponent,
+    ModalContainerComponent,
+    ModalProductComponent
     
   ],
   imports: [

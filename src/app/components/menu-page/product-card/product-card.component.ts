@@ -1,4 +1,4 @@
-import { FormBuilder, FormGroup } from '@angular/forms';
+ import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AddProduct } from './../../models/add-product';
 import { Component, Input, OnInit } from '@angular/core';
@@ -61,6 +61,7 @@ export class ProductCardComponent implements OnInit {
 
   update() {
     const id = this.activatedRoute.snapshot.params.id;
+    console.log(id);
     this.httpClient.put<AddProduct>('http://localhost:8080/menu/update/' + id, this.myForm.value).subscribe(response => {
       console.log(response);
       this.productService.getAllProducts().subscribe(response => {
@@ -89,5 +90,8 @@ export class ProductCardComponent implements OnInit {
         this.modalService.close(id);
 
     }
+
+
+    
 
 }
